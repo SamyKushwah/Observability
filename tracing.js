@@ -14,7 +14,7 @@ const { JaegerExporter } = require("@opentelemetry/exporter-jaeger");
 module.exports = (serviceName) => {
    const exporter = new JaegerExporter({
        serviceName: serviceName,
-       endpoint: 'http://localhost:14268/v1/traces', 
+       endpoint: 'http://localhost:14268/api/traces', 
    });
    const provider = new NodeTracerProvider({
        resource: new Resource({
